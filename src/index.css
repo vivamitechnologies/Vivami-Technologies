@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-50: #f0f6fc;
+  --color-brand-100: #e1edf9;
+  --color-brand-200: #bfdaf0;
+  --color-brand-300: #93bee5;
+  --color-brand-400: #609ad8;
+  --color-brand-500: #9CB64A;
+  --color-brand-600: #889e3f;
+  --color-brand-700: #748736;
+  --color-brand-800: #60702d;
+  --color-brand-900: #0B4A8B;
+  --color-brand-950: #083767;
+}
+
+@layer base {
+  body {
+    @apply text-slate-900 antialiased selection:bg-brand-200 selection:text-brand-900 bg-white;
+  }
+}
+
+@layer components {
+  .btn-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 26, 87, 0.2);
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-slate-200 shadow-xl;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-32 px-6 md:px-12 lg:px-24;
+  }
+}
